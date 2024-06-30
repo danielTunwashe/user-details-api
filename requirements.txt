@@ -60,7 +60,6 @@ python-dateutil==2.8.2
 python-decouple==3.8
 python-dotenv==1.0.0
 pytz==2022.7.1
-pywin32==306
 pyzmq==25.0.2
 requests==2.32.3
 scipy==1.13.1
