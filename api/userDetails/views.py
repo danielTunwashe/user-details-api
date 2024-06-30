@@ -20,6 +20,9 @@ class UserDetails(Resource):
         visitor_name = request.args.get('vistor_name', 'Guest')
         client_ip = request.remote_addr
 
+        # Use a test IP address if running locally
+        if client_ip == '127.0.0.1':
+            client_ip = '8.8.8.8'  # Example IP for testing
 
         #Geolocation API 
         geo_response = requests.get(f"http://ip-api.com/json/{client_ip}").json()
