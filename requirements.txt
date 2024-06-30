@@ -53,6 +53,7 @@ pure-eval==0.2.2
 Pygments==2.15.0
 PyJWT==2.6.0
 pyparsing==3.1.2
+pypiwin32==223
 pyrsistent==0.19.3
 pytest==7.2.2
 python-dateutil==2.8.2
