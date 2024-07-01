@@ -1,5 +1,5 @@
 from flask_restx import Namespace,Resource
-from flask import jsonify
+from flask import request, jsonify
 import requests
 
 
@@ -17,8 +17,8 @@ class UserDetails(Resource):
             Return User details such as (IP address, Location and temperature)
 
         """
-        visitor_name = requests.args.get('visitor_name', 'Guest')
-        client_ip = requests.headers.get('X-Forwarded-For', requests.remote_addr)
+        visitor_name = request.args.get('visitor_name', 'Guest')
+        client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
 
          # Use a test IP address if running locally
         if client_ip == '127.0.0.1':
