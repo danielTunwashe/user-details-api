@@ -5,7 +5,7 @@ import requests
 
 
 
-userdetails_namespace = Namespace('userdetails', description=" A namespace for user details")
+userdetails_namespace = Namespace('/', description=" A namespace for user details")
 
 
 
